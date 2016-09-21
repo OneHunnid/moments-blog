@@ -59,7 +59,7 @@ p {
   box-sizing: border-box; }
 
 .main-content {
-  padding: 64px; }
+  padding: 32px 64px; }
 
 .blog-list {
   display: flex;
