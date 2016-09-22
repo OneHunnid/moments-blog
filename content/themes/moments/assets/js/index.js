@@ -77,7 +77,7 @@ function closeMobileNav() {
   // If the window is larger than 1024px, remove the is-active class
   // from the mobile navigatoin
   $(window).resize( function() {
-    let width = $(window).width();
+    var width = $(window).width();
 
     if (width > 1024) {
       $('#headerWrapper').removeClass('is-active');
