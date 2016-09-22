@@ -4,6 +4,10 @@
 
 .main-content {
   padding: 32px 64px;
+
+  @media (max-width: 1200px) {
+    padding: 32px;
+  }
 }
 
 .blog-list {

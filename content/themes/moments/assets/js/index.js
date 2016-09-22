@@ -54,3 +54,37 @@
 
     };
 })(jQuery);
+
+// Open Mobile Navigation
+function openMobileNav() {
+  $('#mobileNavTrigger').click(function(e) {
+    e.preventDefault();
+
+    $('#headerWrapper').addClass('is-active');
+  });
+}
+
+// Close Mobile Navigation
+function closeMobileNav() {
+
+  // When close is clicked, close the mobile navigation
+  $('#closeTrigger').click(function(e) {
+    e.preventDefault();
+
+    $('#headerWrapper').removeClass('is-active');
+  });
+
+  // If the window is larger than 1024px, remove the is-active class
+  // from the mobile navigatoin
+  $(window).resize( function() {
+    let width = $(window).width();
+
+    if (width > 1024) {
+      $('#headerWrapper').removeClass('is-active');
+    }
+  });
+}
+
+
+openMobileNav();
+closeMobileNav();
