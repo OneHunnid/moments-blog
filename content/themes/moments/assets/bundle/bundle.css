@@ -223,6 +223,7 @@ p {
   pointer-events: none; }
   @media (min-width: 1024px) {
     .header__logo {
+      pointer-events: visible;
       -ms-flex-order: 2;
           order: 2;
       -ms-flex: 1;
