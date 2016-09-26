@@ -2,15 +2,23 @@
   box-sizing: border-box;
 }
 
+.site-wrapper {
+  margin-top: 60px;
+
+  @media (min-width: 1024px) {
+    margin-top: 105px;
+  }
+}
+
 .main-content {
   padding: 0 16px;
 
   @media (min-width: 1024px) {
-    padding: 6px 32px;
+    padding: 0 32px;
   }
 
   @media (min-width: 1200px) {
-    padding: 12px 64px;
+    padding: 0 64px;
   }
 }
 

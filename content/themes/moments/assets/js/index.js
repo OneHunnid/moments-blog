@@ -49,47 +49,38 @@
     };
 })(jQuery);
 
-// Open Mobile Navigation
-function openMobileNav() {
+// Toggle Mobile Navigation Open/Close
+function toggleMobileNav() {
   $('#mobileNavTrigger').click(function(e) {
     e.preventDefault();
 
-    $('#headerWrapper').addClass('is-active');
+    $('#mobileNav').toggleClass('showtime');
+
+    // Toggle menu text from Menu to Close
+    if ( $('#mobileNav').hasClass('showtime') ) {
+      $('#mobileNavTrigger').text('CLOSE');
+    }
+    else {
+      $('#mobileNavTrigger').text('MENU');
+  }
   });
 }
 
-// Close Mobile Navigation
+// Close Mobile Navigation on resize
 function closeMobileNav() {
 
-  // When close is clicked, close the mobile navigation
-  $('#closeTrigger').click(function(e) {
-    e.preventDefault();
-
-    $('#headerWrapper').removeClass('is-active');
-  });
-
-  // If the window is larger than 1024px, remove the is-active class
-  // from the mobile navigatoin
+  // If the window is larger than 10px, remove the showtime class
+  // from the mobile navigation to collapse it
   $(window).resize( function() {
     var width = $(window).width();
 
-    if (width > 1024) {
-      $('#headerWrapper').removeClass('is-active');
+    if (width > 10) {
+      $('#mobileNav').removeClass('showtime');
     }
   });
 }
 
-function toggleNavHook() {
-  $(window).resize( function() {
-    var windowWidth = $(window).width()
 
-    if (windowWidth < 1024) {
-      $('body').toggleClass('nav-hook');
-    }
-  })
-}
-
-
-openMobileNav();
+toggleMobileNav();
 closeMobileNav();
 toggleNavHook();
