@@ -321,7 +321,7 @@ p {
 
 /* RECOMMENDATIONS SECTION */
 .recommendations {
-  margin-top: 48px; }
+  margin: 48px 0 24px 0; }
 
 .recommendations-title {
   text-align: center;
@@ -333,17 +333,31 @@ p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around; }
+      justify-content: space-around;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  @media (min-width: 600px) {
+    .recommendations__wrapper {
+      -ms-flex-direction: row;
+          flex-direction: row; } }
 
 .recommendations__post {
-  width: 48%;
+  width: 100%;
   background-color: #ECECEE;
   padding: 24px;
   border-radius: 4px;
-  box-shadow: 0px 14px 60px #ECECEE; }
+  box-shadow: 0px 14px 60px #ECECEE;
+  margin-bottom: 24px; }
+  @media (min-width: 600px) {
+    .recommendations__post {
+      width: 48%;
+      margin-bottom: 0; } }
 
 .recommendations__post-title {
-  font-size: 2.2em; }
+  font-size: 1.8em; }
+  @media (min-width: 600px) {
+    .recommendations__post-title {
+      font-size: 2.2em; } }
 
 .header {
   position: fixed;
