@@ -332,3 +332,33 @@
 .author__meta-link:last-child {
   margin-right: 0;
 }
+
+/* RECOMMENDATIONS SECTION */
+
+.recommendations {
+  margin-top: 48px;
+}
+
+.recommendations-title {
+  text-align: center;
+  margin: 24px 0;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.recommendations__wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.recommendations__post {
+  width: 48%;
+  background-color: $gray;
+  padding: 24px;
+  border-radius: 4px;
+  box-shadow: 0px 14px 60px $gray;
+}
+
+.recommendations__post-title {
+  font-size: 2.2em;
+}

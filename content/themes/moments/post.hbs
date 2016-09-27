@@ -62,24 +62,21 @@
             {{/author}}
 
           {{!-- Links to Previous/Next posts --}}
-            <!-- <aside class="read-next">
+            <aside class="recommendations">
+              <div class="recommendations-title">Recommended Articles</div>
+              <div class="recommendations__wrapper">
                 {{#next_post}}
-                <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-                    <section class="post">
-                        <h2>{{title}}</h2>
-                        <p>{{excerpt words="19"}}&hellip;</p>
-                    </section>
+                <a class="recommendations__post" href="{{url}}">
+                  <div class="recommendations__post-title">{{title}}</div>
                 </a>
                 {{/next_post}}
                 {{#prev_post}}
-                <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-                    <section class="post">
-                        <h2>{{title}}</h2>
-                        <p>{{excerpt words="19"}}&hellip;</p>
-                    </section>
+                <a class="recommendations__post" href="{{url}}">
+                  <div class="recommendations__post-title">{{title}}</div>
                 </a>
                 {{/prev_post}}
-            </aside> -->
+              </div>
+            </aside>
 
         </section> {{!-- End of post-content --}}
 
