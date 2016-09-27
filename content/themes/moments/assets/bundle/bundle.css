@@ -64,14 +64,28 @@ p {
       margin-top: 105px; } }
 
 .main-content {
-  padding: 0 16px; }
+  padding: 0 16px 16px; }
   @media (min-width: 1024px) {
     .main-content {
-      padding: 0 32px; } }
+      padding: 0 32px 32px; } }
   @media (min-width: 1200px) {
     .main-content {
-      padding: 0 64px; } }
+      padding: 0 64px 64px;
+      max-width: 1400px;
+      margin: 0 auto; } }
 
+.pagination-wrapper {
+  text-align: center;
+  margin-top: 24px;
+  width: 100%; }
+
+.pagination {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 auto;
+  font-weight: 500; }
+
+/* BLOG LIST (HOMEPAGE, TAG PAGE)*/
 .blog-list {
   display: -ms-flexbox;
   display: flex;
@@ -93,14 +107,6 @@ p {
     .blog-list__item {
       width: 49%;
       margin-bottom: 2%; } }
-  @media (min-width: 1400px) {
-    .blog-list__item {
-      width: 32%;
-      margin-bottom: 2.4%; } }
-  @media (min-width: 1800px) {
-    .blog-list__item {
-      width: 24%;
-      margin-bottom: 1.4%; } }
 
 .blog-list__item__meta {
   font-size: 1.2em;
@@ -152,6 +158,56 @@ p {
     border-radius: 0; }
   .button--underline:hover {
     opacity: 0.8; }
+
+/* PAGE HEADER */
+.page-header {
+  padding: 24px 16px 48px;
+  text-align: center;
+  text-transform: capitalize; }
+  @media (min-width: 1024px) {
+    .page-header {
+      padding: 48px 32px;
+      margin-bottom: 38px; } }
+  @media (min-width: 1200px) {
+    .page-header {
+      padding: 48px 64px;
+      margin-bottom: 38px; } }
+
+.page-header__title {
+  font-size: 3.2em;
+  line-height: 1.4;
+  margin-bottom: 12px; }
+  @media (min-width: 1024px) {
+    .page-header__title {
+      font-size: 6.4em;
+      margin-bottom: 24px;
+      line-height: 1.2; } }
+
+.page-header__desc {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #666666;
+  margin: 0; }
+  @media (min-width: 1024px) {
+    .page-header__desc {
+      font-size: 1.6em; } }
+
+.page-header__meta {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #666666;
+  margin: 0; }
+  @media (min-width: 1024px) {
+    .page-header__meta {
+      font-size: 1.6em; } }
+
+.post-content {
+  max-width: 680px;
+  margin: 0 auto; }
+
+.post-content p:first-child {
+  font-weight: 600;
+  font-size: 1.6em; }
 
 .header {
   position: fixed;

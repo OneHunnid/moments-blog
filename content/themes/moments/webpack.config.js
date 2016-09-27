@@ -13,6 +13,7 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/assets/js/'
   },
+  watch: true,
   plugins: [
     new ExtractTextPlugin('bundle.css', {
         allChunks: true
