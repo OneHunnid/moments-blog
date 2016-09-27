@@ -24,6 +24,8 @@
   }
 }
 
+/* PAGINATION FOR HOMEPAGE AND TAG PAGE*/
+
 .pagination-wrapper {
   text-align: center;
   margin-top: 24px;
@@ -37,7 +39,7 @@
   font-weight: 500;
 }
 
-/* BLOG LIST (HOMEPAGE, TAG PAGE)*/
+/* BLOG LIST (HOMEPAGE, TAG PAGE) */
 
 .blog-list {
   display: flex;
@@ -82,55 +84,57 @@
 
 }
 
+/* BUTTONS */
+
 .button {
-    background: $gray-galaxy;
-    display: inline-block;
-    font-size: 1.2em;
-    font-weight: 600;
-    cursor: pointer;
-    color: $black;
-    text-transform: uppercase;
-    padding: 12px 28px;
-    border-radius: 4px;
-    margin: 24px;
-    transition: all 0.14s ease-in-out;
-    letter-spacing: 0.06em;
+  background: $gray-galaxy;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  color: $black;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: 4px;
+  margin: 24px;
+  transition: all 0.14s ease-in-out;
+  letter-spacing: 0.06em;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &--nav {
+    background: $white;
+    border: 2px solid $black;
+    padding: 6px 12px;
 
     &:hover {
-      opacity: 0.8;
+      opacity: 0.64;
     }
+  }
 
-    &--nav {
-      background: $white;
-      border: 2px solid $black;
-      padding: 6px 12px;
+  &--shadow {
+    background: $white;
+    box-shadow: 0px 14px 60px $gray;
+  }
 
-      &:hover {
-        opacity: 0.64;
-      }
-    }
+  &--shadow:hover {
+    box-shadow: 0px 14px 60px $gray-medium;
+    opacity: 1;
+  }
 
-    &--shadow {
-      background: $white;
-      box-shadow: 0px 14px 60px $gray;
-    }
+  &--underline {
+    background: transparent;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 2px solid $black;
+    border-radius: 0;
+  }
 
-    &--shadow:hover {
-      box-shadow: 0px 14px 60px $gray-medium;
-      opacity: 1;
-    }
-
-    &--underline {
-      background: transparent;
-      padding: 12px 0;
-      border: none;
-      border-bottom: 2px solid $black;
-      border-radius: 0;
-    }
-
-    &--underline:hover {
-      opacity: 0.8;
-    }
+  &--underline:hover {
+    opacity: 0.8;
+  }
 }
 
 
@@ -194,4 +198,137 @@
 .post-content p:first-child {
   font-weight: 600;
   font-size: 1.6em;
+}
+
+/* SHARE SECTION WITH ICONS FOR POSTS*/
+
+.post-share {
+  margin: 48px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+}
+
+.icon {
+  padding: 8px 12px;
+  background-color: #fbfbfb;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 500;
+  flex: 1;
+  margin-bottom: 12px;
+  color: $white;
+
+  @media (min-width: 600px) {
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.icon:last-child {
+  margin-right: 0;
+}
+
+.icon-twitter {
+  background-color: #1da1f2;
+
+  &:hover {
+    background-color: #1998e6;
+  }
+}
+
+.icon-facebook {
+  background-color: #3b5998;
+
+  &:hover {
+    background-color: #375390;;
+  }
+}
+
+.icon-google-plus {
+  background-color: #dd4b39;
+
+  &:hover {
+    background-color: #d04332;;
+  }
+}
+
+/* AUTHOR SECTION ON POSTS */
+.author {
+  margin-bottom: 24px;
+  padding: 24px;
+  background-color: $gray-soft;
+  border-radius:  4px;
+}
+
+.author__image {
+  border-radius: 100%;
+  background-color: $gray-galaxy;
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-width: 600px) {
+    float: left;
+    margin: 0;
+  }
+}
+
+.author__content {
+  @media (min-width: 600px) {
+    margin-left: 144px;
+  }
+}
+
+.author__name {
+  font-size: 2.4em;
+  text-align: center;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  @media (min-width: 600px) {
+    text-align: left;
+  }
+}
+
+.author__desc {
+  text-align: center;
+  margin-top: 12px;
+
+  @media (min-width: 600px) {
+    text-align: left;
+  }
+}
+
+.author__meta {
+  text-align: center;
+
+  @media (min-width: 600px) {
+    text-align: left;
+  }
+}
+
+.author__meta-link {
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-right: 24px;
+  border-bottom: 2px solid $gray;
+  transition: border-bottom 0.14s ease-in-out;
+
+  &:hover {
+    border-color: $gray-medium;
+  }
+}
+
+.author__meta-link:last-child {
+  margin-right: 0;
 }
