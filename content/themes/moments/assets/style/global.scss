@@ -173,6 +173,8 @@
   font-weight: 600;
   color: $gray-space;
   margin: 0;
+  max-width: 800px;
+  margin: 0 auto;
 
   @media (min-width: 1024px) {
     font-size: 1.6em;
@@ -376,4 +378,9 @@
   @media (min-width: 600px) {
     font-size: 2.2em
   }
+}
+
+.page-header .author__meta {
+  text-align: center;
+  margin: 24px 0;
 }

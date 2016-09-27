@@ -189,7 +189,9 @@ p {
   font-size: 1.2em;
   font-weight: 600;
   color: #666666;
-  margin: 0; }
+  margin: 0;
+  max-width: 800px;
+  margin: 0 auto; }
   @media (min-width: 1024px) {
     .page-header__desc {
       font-size: 1.6em; } }
@@ -358,6 +360,10 @@ p {
   @media (min-width: 600px) {
     .recommendations__post-title {
       font-size: 2.2em; } }
+
+.page-header .author__meta {
+  text-align: center;
+  margin: 24px 0; }
 
 .header {
   position: fixed;
