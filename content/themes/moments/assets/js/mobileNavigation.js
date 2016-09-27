@@ -8,13 +8,12 @@ var mobileNav = {
 
       $('#mobileNav').toggleClass('showtime');
 
-      // Toggle menu text from Menu to Close
       if ( $('#mobileNav').hasClass('showtime') ) {
         $('#mobileNavTrigger').text('CLOSE');
       }
       else {
         $('#mobileNavTrigger').text('MENU');
-    }
+      }
     });
   },
 
@@ -28,6 +27,7 @@ var mobileNav = {
 
       if (width > 10) {
         $('#mobileNav').removeClass('showtime');
+        $('#mobileNavTrigger').text('MENU');
       }
     });
   }
