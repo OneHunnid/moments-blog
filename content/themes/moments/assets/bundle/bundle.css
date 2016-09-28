@@ -99,7 +99,7 @@ p {
   background-color: #ECECEE;
   border-radius: 4px;
   box-shadow: 0px 14px 60px #ECECEE;
-  margin-bottom: 4%;
+  margin-bottom: 16px;
   min-height: 240px;
   padding: 24px;
   position: relative;
@@ -107,7 +107,11 @@ p {
   @media (min-width: 800px) {
     .blog-list__item {
       width: 49%;
-      margin-bottom: 2%; } }
+      margin-bottom: 18px; } }
+  @media (min-width: 1024px) {
+    .blog-list__item {
+      width: 49%;
+      margin-bottom: 24px; } }
 
 .blog-list__item__meta {
   font-size: 1.2em;
@@ -433,6 +437,8 @@ p {
   margin: 0;
   margin-left: -40px;
   pointer-events: none; }
+  .header__logo a {
+    pointer-events: all; }
   @media (min-width: 1024px) {
     .header__logo {
       pointer-events: visible;

@@ -74,6 +74,10 @@
   margin-left: -40px;
   pointer-events: none;
 
+  a {
+    pointer-events: all;
+  }
+
   @media (min-width: 1024px) {
     pointer-events: visible;
     order: 2;
