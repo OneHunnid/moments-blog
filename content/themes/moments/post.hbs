@@ -9,13 +9,37 @@
 <main class="main-content" role="main">
     <article class="{{post_class}}">
 
+      {{#has tag="case study"}}
+      <aside class="post-sidebar">
+        <div class="post-sidebar__image" style="background-image: url({{image}})"></div>
+        <div id="caseStudyNav">
+          <ul class="case-study__nav">
+            <li class="case-study__nav__link"><a href="#">Overview</a></li>
+            <li class="case-study__nav__link"><a href="#">Primary Objectives</a></li>
+            <li class="case-study__nav__link"><a href="#">User Testing</a></li>
+            <li class="case-study__nav__link"><a href="#">Conclusion</a></li>
+          </ul>
+        </div>
+      </aside>
+      {{/has}}
+
         {{!-- Blog Post Header --}}
-        <header class="page-header">
+        {{#has tag="case study"}}
+          <header class="page-header--case-study">
+            <h1 class="page-header__title--case-study">{{title}}</h1>
+            <section class="page-header__meta">
+                {{tags suffix=" • "}}<time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD YYYY"}}</time>
+            </section>
+            <hr>
+          </header>
+        {{else}}
+          <header class="page-header">
             <h1 class="page-header__title">{{title}}</h1>
             <section class="page-header__meta">
                 {{tags suffix=" • "}}<time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD YYYY"}}</time>
             </section>
-        </header>
+          </header>
+        {{/has}}
 
         <section class="post-content">
 
