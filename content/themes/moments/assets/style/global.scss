@@ -24,7 +24,10 @@
   }
 }
 
-/* PAGINATION FOR HOMEPAGE AND TAG PAGE*/
+
+/* =============================
+   PAGINATION FOR HOMEPAGE AND TAG PAGE
+   ============================= */
 
 .pagination-wrapper {
   text-align: center;
@@ -39,7 +42,10 @@
   font-weight: 500;
 }
 
-/* BLOG LIST (HOMEPAGE, TAG PAGE) */
+
+/* =============================
+   BLOG LIST FOR HOMEPAGE & TAGEPAGE
+   ============================= */
 
 .blog-list {
   display: flex;
@@ -89,7 +95,9 @@
 
 }
 
-/* BUTTONS */
+/* =============================
+   BUTTONS
+   ============================= */
 
 .button {
   background: $gray-galaxy;
@@ -142,8 +150,9 @@
   }
 }
 
-
-/* PAGE HEADER */
+/* =============================
+   PAGE HEADER
+   ============================= */
 
 .page-header {
   padding: 24px 16px 48px;
@@ -213,7 +222,9 @@
   max-width: 680px;
 }
 
-/* SHARE SECTION WITH ICONS FOR POSTS*/
+/* =============================
+   SHARE SECTION WITH ICONS
+   ============================= */
 
 .post-share {
   margin: 48px 0;
@@ -271,7 +282,10 @@
   }
 }
 
-/* AUTHOR SECTION ON POSTS */
+
+/* =============================
+   AUTHOR SECTION ON POSTS
+   ============================= */
 .author {
   margin-bottom: 24px;
   padding: 24px;
@@ -346,7 +360,10 @@
   margin-right: 0;
 }
 
-/* RECOMMENDATIONS SECTION */
+
+/* =============================
+   RECOMMENDATIONS SECTION
+   ============================= */
 
 .recommendations {
   margin: 48px 0 24px 0;
