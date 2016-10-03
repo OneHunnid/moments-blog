@@ -53,9 +53,13 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var mobileNav = __webpack_require__(2);
+	var csNav = __webpack_require__(5);
+	var smoothScroller = __webpack_require__(6);
 
 	mobileNav.toggleMobileNav();
 	mobileNav.closeMobileNav();
+	csNav.caseStudyNavigation();
+	smoothScroller.smoothScroller();
 
 
 /***/ },
@@ -10331,6 +10335,112 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(3);
+
+	var csNav = {
+	  caseStudyNavigation: function() {
+	    // Identify all h2 on the page
+	    var headingNodes = document.querySelectorAll("h2");
+	    // Return and extract the text from h2s
+	    var headingText = Array.prototype.map.call(headingNodes, function(obj) {
+	      return obj.textContent;
+	    });
+
+	    // Create the Navigation with Heading Titles
+	    var list = document.createElement("ul");
+	    list.classList.add('case-study__nav');
+
+	    for (var i = 0; i < headingText.length; i++) {
+	      var item = document.createElement("li");
+	      var link = document.createElement('a');
+
+	      item.classList.add('case-study__nav__link');
+	      var anchorName = headingText[i].replace(/ /g,'').toLowerCase();
+	      link.setAttribute('href', "#")
+	      link.setAttribute('data-scroll-to', "#" + anchorName)
+	      link.appendChild(document.createTextNode(headingText[i]));
+	      item.appendChild(link)
+	      list.appendChild(item);
+	    }
+
+	    // Insert Nav into Sidebar of Case Study Layout
+	    $('#caseStudyNav').append(list);
+	  }
+	}
+
+	module.exports = csNav;
+
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	var smoothScroller = {
+	  smoothScroller: function() {
+	    function bindScrollTriggers() {
+	      var nodes = window.document.querySelectorAll('[data-scroll-to]');
+	      if (nodes.length === 0) {
+	        return;
+	      }
+
+	      for (var i = 0; i < nodes.length; i++) {
+	        ((node) => {
+
+	          var scrollToSelector = node.dataset.scrollTo;
+	          var scrollToTarget = window.document.querySelector(scrollToSelector);
+
+	          if (!scrollToTarget) {
+	            return;
+	          }
+
+	          node.addEventListener('click', (e) => {
+	            e.preventDefault();
+
+	            scrollToTop(scrollToTarget);
+	          });
+
+	        })(nodes[i]);
+	      }
+	    }
+
+	    const MOTION_DURATION = 1000;
+
+	    // easeOutCubic
+	    const EASING_FUNCTION = function(x, t, b, c, d) {
+	      return c*((t=t/d-1)*t*t + 1) + b;
+	    };
+
+	    function scrollToTop(node) {
+	      const startTime = Date.now();
+	      const startValue = window.document.body.scrollTop;
+	      const endValue = window.document.body.scrollTop + node.getBoundingClientRect().top - 118;
+
+	      function tick() {
+	        const currentTime = Date.now();
+	        const elapsed = (currentTime - startTime);
+	        const percent = elapsed / MOTION_DURATION;
+
+	        var value = EASING_FUNCTION(percent, elapsed, startValue, (endValue - startValue), MOTION_DURATION);
+
+	        window.scrollTo(0, value);
+
+	        if ((startTime + MOTION_DURATION) > currentTime) {
+	          window.requestAnimationFrame(tick);
+	        }
+	      }
+	      tick();
+	    }
+	    bindScrollTriggers();
+	  }
+	}
+
+	module.exports = smoothScroller;
+
 
 /***/ }
 /******/ ]);

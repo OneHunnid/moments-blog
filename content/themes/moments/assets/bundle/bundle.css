@@ -439,7 +439,7 @@ p {
       width: 200px;
       -ms-flex-order: 1;
           order: 1;
-      margin-right: 24px;
+      margin-right: 16px;
       padding: 16px; } }
 
 .case-study__sidebar__image {
