@@ -52,9 +52,9 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var mobileNav = __webpack_require__(2);
-	var csNav = __webpack_require__(5);
-	var smoothScroller = __webpack_require__(6);
+	var mobileNav = __webpack_require__(7);
+	var csNav = __webpack_require__(8);
+	var smoothScroller = __webpack_require__(9);
 
 	mobileNav.toggleMobileNav();
 	mobileNav.closeMobileNav();
@@ -63,48 +63,7 @@
 
 
 /***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $ = __webpack_require__(3);
-
-	var mobileNav = {
-	  // Toggle Mobile Navigation Open/Close
-	  toggleMobileNav: function() {
-	    $('#mobileNavTrigger').click(function(e) {
-	      e.preventDefault();
-
-	      $('#mobileNav').toggleClass('showtime');
-
-	      if ( $('#mobileNav').hasClass('showtime') ) {
-	        $('#mobileNavTrigger').text('CLOSE');
-	      }
-	      else {
-	        $('#mobileNavTrigger').text('MENU');
-	      }
-	    });
-	  },
-
-	  // Close Mobile Navigation on resize
-	  closeMobileNav: function() {
-
-	    // If the window is larger than 10px, remove the showtime class
-	    // from the mobile navigation to collapse it
-	    $(window).resize( function() {
-	      var width = $(window).width();
-
-	      if (width > 10) {
-	        $('#mobileNav').removeClass('showtime');
-	        $('#mobileNavTrigger').text('MENU');
-	      }
-	    });
-	  }
-	}
-
-	module.exports = mobileNav;
-
-
-/***/ },
+/* 2 */,
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -10337,7 +10296,51 @@
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 5 */
+/* 5 */,
+/* 6 */,
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(3);
+
+	var mobileNav = {
+	  // Toggle Mobile Navigation Open/Close
+	  toggleMobileNav: function() {
+	    $('#mobileNavTrigger').click(function(e) {
+	      e.preventDefault();
+
+	      $('#mobileNav').toggleClass('showtime');
+
+	      if ( $('#mobileNav').hasClass('showtime') ) {
+	        $('#mobileNavTrigger').text('CLOSE');
+	      }
+	      else {
+	        $('#mobileNavTrigger').text('MENU');
+	      }
+	    });
+	  },
+
+	  // Close Mobile Navigation on resize
+	  closeMobileNav: function() {
+
+	    // If the window is larger than 10px, remove the showtime class
+	    // from the mobile navigation to collapse it
+	    $(window).resize( function() {
+	      var width = $(window).width();
+
+	      if (width > 10) {
+	        $('#mobileNav').removeClass('showtime');
+	        $('#mobileNavTrigger').text('MENU');
+	      }
+	    });
+	  }
+	}
+
+	module.exports = mobileNav;
+
+
+/***/ },
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(3);
@@ -10347,6 +10350,7 @@
 	    // Identify all h2 on the page
 	    var headingNodes = document.querySelectorAll("h2");
 	    // Return and extract the text from h2s
+	    console.log(headingNodes)
 	    var headingText = Array.prototype.map.call(headingNodes, function(obj) {
 	      return obj.textContent;
 	    });
@@ -10377,7 +10381,7 @@
 
 
 /***/ },
-/* 6 */
+/* 9 */
 /***/ function(module, exports) {
 
 	var smoothScroller = {

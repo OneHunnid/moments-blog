@@ -1,6 +1,6 @@
-var mobileNav = require('./mobileNavigation');
-var csNav = require('./caseStudyNavigation');
-var smoothScroller = require('./smoothScroller');
+var mobileNav = require('./mobile-navigation');
+var csNav = require('./case-study-navigation');
+var smoothScroller = require('./smooth-scroller');
 
 mobileNav.toggleMobileNav();
 mobileNav.closeMobileNav();

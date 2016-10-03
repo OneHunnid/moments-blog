@@ -127,6 +127,15 @@
   }
 }
 
+.mobile-nav__cta {
+  float: none;
+  margin: 0;
+
+  @media (min-width: 1024px) {
+    float: right;
+  }
+}
+
 .mobile-nav__cta__container {
   min-width: 100%;
   text-align: center;
@@ -139,19 +148,11 @@
   }
 }
 
-.mobile-nav__cta {
-  float: none;
-  margin: 0;
-
-  @media (min-width: 1024px) {
-    float: right;
-  }
-}
 
 
-/* =============================
-   CONTROL HEADER FOR DESKTOP
-   ============================= */
+
+/* CONTROL HEADER FOR DESKTOP
+***************************************************/
 
 .header__nav {
   display: none;

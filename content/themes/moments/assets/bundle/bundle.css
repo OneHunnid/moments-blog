@@ -1,9 +1,7 @@
-/* =============================
-   FONT STACK
-   ============================= */
-/* =============================
-   COLORS
-   ============================= */
+/* FONT STACK
+***************************************************/
+/* COLORS
+***************************************************/
 body {
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 62.5%;
@@ -60,6 +58,20 @@ p {
   line-height: 1.7;
   font-size: 1.4em; }
 
+/* CSS DIRECTORY
+
+	1. GENERAL
+	2. PAGINATION FOR HOMEPAGE AND TAG PAGE
+	3. POST LAYOUT & TAG LAYOUT
+	4. BLOG LIST FOR HOMEPAGE & TAG PAGE
+	5. BUTTONS
+  6. SHARE SECTION ON POSTS
+  7. AUTHOR SECTION ON POSTS
+  8. RECOMMENDATIONS SECTION ON POSTS
+
+***************************************************/
+/* GENERAL
+***************************************************/
 *, *::before, *::after {
   box-sizing: border-box; }
 
@@ -80,9 +92,8 @@ p {
       max-width: 1400px;
       margin: 0 auto; } }
 
-/* =============================
-   PAGINATION FOR HOMEPAGE AND TAG PAGE
-   ============================= */
+/* PAGINATION FOR HOMEPAGE AND TAG PAGE
+***************************************************/
 .pagination-wrapper {
   text-align: center;
   margin-top: 24px;
@@ -94,9 +105,66 @@ p {
   margin: 0 auto;
   font-weight: 500; }
 
-/* =============================
-   BLOG LIST FOR HOMEPAGE & TAGEPAGE
-   ============================= */
+/* POST LAYOUT & TAG LAYOUT
+ ***************************************************/
+.post-content {
+  max-width: 680px;
+  margin: 0 auto; }
+
+.post-content p:first-child {
+  font-weight: 600;
+  font-size: 1.6em; }
+
+.post-footer {
+  margin: 0 auto;
+  max-width: 680px; }
+
+.post-header {
+  padding: 24px 16px 48px;
+  text-align: center;
+  text-transform: capitalize; }
+  @media (min-width: 1024px) {
+    .post-header {
+      padding: 48px 32px;
+      margin-bottom: 38px; } }
+  @media (min-width: 1200px) {
+    .post-header {
+      padding: 48px 64px;
+      margin-bottom: 38px; } }
+
+.post-header__title {
+  font-size: 3.2em;
+  line-height: 1.4;
+  margin-bottom: 12px; }
+  @media (min-width: 1024px) {
+    .post-header__title {
+      font-size: 6.4em;
+      margin-bottom: 24px;
+      line-height: 1.2; } }
+
+.post-header__desc {
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #666666;
+  margin: 0;
+  max-width: 800px;
+  margin: 0 auto; }
+  @media (min-width: 1024px) {
+    .post-header__desc {
+      font-size: 1.6em; } }
+
+.post-header__meta {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #666666;
+  margin: 0; }
+  @media (min-width: 1024px) {
+    .post-header__meta {
+      font-size: 1.6em; } }
+
+/* BLOG LIST FOR HOMEPAGE & TAG PAGE
+***************************************************/
 .blog-list {
   display: -ms-flexbox;
   display: flex;
@@ -138,9 +206,8 @@ p {
   right: 24px;
   margin: 0; }
 
-/* =============================
-   BUTTONS
-   ============================= */
+/* BUTTONS
+***************************************************/
 .button {
   background: #C7C7C7;
   display: inline-block;
@@ -177,68 +244,8 @@ p {
   .button--underline:hover {
     opacity: 0.8; }
 
-/* =============================
-   PAGE HEADER
-   ============================= */
-.page-header {
-  padding: 24px 16px 48px;
-  text-align: center;
-  text-transform: capitalize; }
-  @media (min-width: 1024px) {
-    .page-header {
-      padding: 48px 32px;
-      margin-bottom: 38px; } }
-  @media (min-width: 1200px) {
-    .page-header {
-      padding: 48px 64px;
-      margin-bottom: 38px; } }
-
-.page-header__title {
-  font-size: 3.2em;
-  line-height: 1.4;
-  margin-bottom: 12px; }
-  @media (min-width: 1024px) {
-    .page-header__title {
-      font-size: 6.4em;
-      margin-bottom: 24px;
-      line-height: 1.2; } }
-
-.page-header__desc {
-  font-size: 1.2em;
-  font-weight: 600;
-  line-height: 1.6;
-  color: #666666;
-  margin: 0;
-  max-width: 800px;
-  margin: 0 auto; }
-  @media (min-width: 1024px) {
-    .page-header__desc {
-      font-size: 1.6em; } }
-
-.page-header__meta {
-  font-size: 1.2em;
-  font-weight: 600;
-  color: #666666;
-  margin: 0; }
-  @media (min-width: 1024px) {
-    .page-header__meta {
-      font-size: 1.6em; } }
-
-.post-content {
-  max-width: 680px;
-  margin: 0 auto; }
-
-.post-content p:first-child {
-  font-weight: 600;
-  font-size: 1.6em; }
-
-.post-footer {
-  margin: 0 auto;
-  max-width: 680px; }
-
-/* =============================
-   SHARE SECTION WITH ICONS
-   ============================= */
+/* SHARE SECTION ON POSTS
+***************************************************/
 .post-share {
   margin: 48px 0;
   display: -ms-flexbox;
@@ -286,9 +293,8 @@ p {
   .icon-google-plus:hover {
     background-color: #d04332; }
 
-/* =============================
-   AUTHOR SECTION ON POSTS
-   ============================= */
+/* AUTHOR SECTION ON POSTS
+***************************************************/
 .author {
   margin-bottom: 24px;
   padding: 24px;
@@ -336,21 +342,20 @@ p {
     .author__meta {
       text-align: left; } }
 
-.author__meta-link {
+.author__meta__link {
   font-weight: 500;
   font-size: 1.2em;
   margin-right: 24px;
   border-bottom: 2px solid #ECECEE;
   transition: border-bottom 0.14s ease-in-out; }
-  .author__meta-link:hover {
+  .author__meta__link:hover {
     border-color: #DDDDDD; }
 
 .author__meta-link:last-child {
   margin-right: 0; }
 
-/* =============================
-   RECOMMENDATIONS SECTION
-   ============================= */
+/* RECOMMENDATIONS SECTION ON POSTS
+***************************************************/
 .recommendations {
   margin: 48px 0 24px 0; }
 
@@ -428,9 +433,8 @@ p {
   color: #666666;
   margin: 0; }
 
-/* =============================
-   CASE STUDY SIDEBAR
-   ============================= */
+/* CASE STUDY SIDEBAR
+***************************************************/
 .case-study__sidebar {
   display: none; }
   @media (min-width: 1159px) {
@@ -570,6 +574,13 @@ p {
   .mobile-nav__menu a:last-child {
     padding-right: 0; }
 
+.mobile-nav__cta {
+  float: none;
+  margin: 0; }
+  @media (min-width: 1024px) {
+    .mobile-nav__cta {
+      float: right; } }
+
 .mobile-nav__cta__container {
   min-width: 100%;
   text-align: center;
@@ -581,16 +592,8 @@ p {
       margin-top: 0;
       min-width: 400px; } }
 
-.mobile-nav__cta {
-  float: none;
-  margin: 0; }
-  @media (min-width: 1024px) {
-    .mobile-nav__cta {
-      float: right; } }
-
-/* =============================
-   CONTROL HEADER FOR DESKTOP
-   ============================= */
+/* CONTROL HEADER FOR DESKTOP
+***************************************************/
 .header__nav {
   display: none; }
   @media (min-width: 1024px) {

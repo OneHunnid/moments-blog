@@ -5,6 +5,7 @@ var csNav = {
     // Identify all h2 on the page
     var headingNodes = document.querySelectorAll("h2");
     // Return and extract the text from h2s
+    console.log(headingNodes)
     var headingText = Array.prototype.map.call(headingNodes, function(obj) {
       return obj.textContent;
     });

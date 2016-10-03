@@ -4,9 +4,9 @@
 {{!-- If we have a tag cover, display that - else blog cover - else nothing --}}
 <header class="header-tag">
   {{#tag}}
-    <div class="page-header">
-      <h1 class="page-header__title">{{name}} Posts</h1>
-      <h2 class="page-header__desc">
+    <div class="post-header">
+      <h1 class="post-header__title">{{name}} Posts</h1>
+      <h2 class="post-header__desc">
         {{#if description}}
           {{description}}
         {{else}}

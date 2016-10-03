@@ -5,14 +5,14 @@
 
 {{!-- Everything inside the #author tags pulls data from the author --}}
 {{#author}}
-    <section class="page-header">
-        <h1 class="page-header__title">{{name}}</h1>
+    <section class="post-header">
+        <h1 class="post-header__title">{{name}}</h1>
         {{#if bio}}
-            <h2 class="page-header__desc">{{bio}}</h2>
+            <h2 class="post-header__desc">{{bio}}</h2>
         {{/if}}
         <div class="author__meta">
-            {{#if website}}<span class="author__meta-link"><a href="{{website}}">Personal Website</a></span>{{/if}}
-            {{#if twitter}}<span class="author__meta-link"><a href="https://twitter.com/{{twitter}}">Follow on Twitter</a></span>{{/if}}
+            {{#if website}}<span class="author__meta__link"><a href="{{website}}">Personal Website</a></span>{{/if}}
+            {{#if twitter}}<span class="author__meta__link"><a href="https://twitter.com/{{twitter}}">Follow on Twitter</a></span>{{/if}}
         </div>
     </section>
 {{/author}}

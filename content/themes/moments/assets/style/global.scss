@@ -1,3 +1,21 @@
+/* CSS DIRECTORY
+
+	1. GENERAL
+	2. PAGINATION FOR HOMEPAGE AND TAG PAGE
+	3. POST LAYOUT & TAG LAYOUT
+	4. BLOG LIST FOR HOMEPAGE & TAG PAGE
+	5. BUTTONS
+  6. SHARE SECTION ON POSTS
+  7. AUTHOR SECTION ON POSTS
+  8. RECOMMENDATIONS SECTION ON POSTS
+
+***************************************************/
+
+
+
+/* GENERAL
+***************************************************/
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -25,9 +43,10 @@
 }
 
 
-/* =============================
-   PAGINATION FOR HOMEPAGE AND TAG PAGE
-   ============================= */
+
+
+/* PAGINATION FOR HOMEPAGE AND TAG PAGE
+***************************************************/
 
 .pagination-wrapper {
   text-align: center;
@@ -43,9 +62,85 @@
 }
 
 
-/* =============================
-   BLOG LIST FOR HOMEPAGE & TAGEPAGE
-   ============================= */
+
+
+ /* POST LAYOUT & TAG LAYOUT
+ ***************************************************/
+
+.post-content {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.post-content p:first-child {
+  font-weight: 600;
+  font-size: 1.6em;
+}
+
+.post-footer {
+  margin: 0 auto;
+  max-width: 680px;
+}
+
+.post-header {
+  padding: 24px 16px 48px;
+  text-align: center;
+  text-transform: capitalize;
+
+  @media (min-width: 1024px) {
+    padding: 48px 32px;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 48px 64px;
+    margin-bottom: 38px;
+  }
+}
+
+.post-header__title {
+  font-size: 3.2em;
+  line-height: 1.4;
+  margin-bottom: 12px;
+
+  @media (min-width: 1024px) {
+    font-size: 6.4em;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+}
+
+.post-header__desc {
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: 1.6;
+  color: $gray-space;
+  margin: 0;
+  max-width: 800px;
+  margin: 0 auto;
+
+  @media (min-width: 1024px) {
+    font-size: 1.6em;
+  }
+}
+
+.post-header__meta {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: $gray-space;
+  margin: 0;
+
+  @media (min-width: 1024px) {
+    font-size: 1.6em;
+  }
+}
+
+
+
+
+/* BLOG LIST FOR HOMEPAGE & TAG PAGE
+***************************************************/
+
 
 .blog-list {
   display: flex;
@@ -91,13 +186,11 @@
   margin: 0;
 }
 
-.blog-list__item__date {
 
-}
 
-/* =============================
-   BUTTONS
-   ============================= */
+
+/* BUTTONS
+***************************************************/
 
 .button {
   background: $gray-galaxy;
@@ -150,81 +243,11 @@
   }
 }
 
-/* =============================
-   PAGE HEADER
-   ============================= */
 
-.page-header {
-  padding: 24px 16px 48px;
-  text-align: center;
-  text-transform: capitalize;
 
-  @media (min-width: 1024px) {
-    padding: 48px 32px;
-    margin-bottom: 38px;
-  }
 
-  @media (min-width: 1200px) {
-    padding: 48px 64px;
-    margin-bottom: 38px;
-  }
-}
-
-.page-header__title {
-  font-size: 3.2em;
-  line-height: 1.4;
-  margin-bottom: 12px;
-
-  @media (min-width: 1024px) {
-    font-size: 6.4em;
-    margin-bottom: 24px;
-    line-height: 1.2;
-  }
-}
-
-.page-header__desc {
-  font-size: 1.2em;
-  font-weight: 600;
-  line-height: 1.6;
-  color: $gray-space;
-  margin: 0;
-  max-width: 800px;
-  margin: 0 auto;
-
-  @media (min-width: 1024px) {
-    font-size: 1.6em;
-  }
-}
-
-.page-header__meta {
-  font-size: 1.2em;
-  font-weight: 600;
-  color: $gray-space;
-  margin: 0;
-
-  @media (min-width: 1024px) {
-    font-size: 1.6em;
-  }
-}
-
-.post-content {
-  max-width: 680px;
-  margin: 0 auto;
-}
-
-.post-content p:first-child {
-  font-weight: 600;
-  font-size: 1.6em;
-}
-
-.post-footer {
-  margin: 0 auto;
-  max-width: 680px;
-}
-
-/* =============================
-   SHARE SECTION WITH ICONS
-   ============================= */
+/* SHARE SECTION ON POSTS
+***************************************************/
 
 .post-share {
   margin: 48px 0;
@@ -283,9 +306,11 @@
 }
 
 
-/* =============================
-   AUTHOR SECTION ON POSTS
-   ============================= */
+
+
+/* AUTHOR SECTION ON POSTS
+***************************************************/
+
 .author {
   margin-bottom: 24px;
   padding: 24px;
@@ -344,7 +369,7 @@
   }
 }
 
-.author__meta-link {
+.author__meta__link {
   font-weight: 500;
   font-size: 1.2em;
   margin-right: 24px;
@@ -361,9 +386,10 @@
 }
 
 
-/* =============================
-   RECOMMENDATIONS SECTION
-   ============================= */
+
+
+/* RECOMMENDATIONS SECTION ON POSTS
+***************************************************/
 
 .recommendations {
   margin: 48px 0 24px 0;
