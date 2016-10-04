@@ -322,6 +322,10 @@ p {
 
 /* AUTHOR SECTION ON POSTS
 ***************************************************/
+.author-template .author__meta {
+  text-align: center;
+  margin-top: 32px; }
+
 .author {
   margin-bottom: 24px;
   padding: 24px;
