@@ -102,7 +102,28 @@ p {
   display: inline-block;
   font-size: 14px;
   margin: 0 auto;
-  font-weight: 500; }
+  font-weight: 500;
+  border: 2px solid #0d0d0d;
+  padding: 5px 0;
+  border-radius: 4px;
+  background-color: #FFFFFF; }
+
+.page-number {
+  padding: 6px 12px; }
+
+.newer-posts {
+  padding: 6px 12px;
+  border-right: 2px solid black; }
+  .newer-posts:hover {
+    background-color: #ECECEE;
+    border-color: #0d0d0d; }
+
+.older-posts {
+  padding: 6px 12px;
+  border-left: 2px solid black; }
+  .older-posts:hover {
+    background-color: #ECECEE;
+    border-color: #0d0d0d; }
 
 /* POST LAYOUT & TAG LAYOUT
  ***************************************************/
@@ -133,13 +154,17 @@ p {
 
 .post-header__title {
   font-size: 3.2em;
-  line-height: 1.4;
+  line-height: 1.2;
   margin-bottom: 12px; }
+  @media (min-width: 600px) {
+    .post-header__title {
+      font-size: 3.8em; } }
   @media (min-width: 1024px) {
     .post-header__title {
       font-size: 6.4em;
-      margin-bottom: 24px;
-      line-height: 1.2; } }
+      line-height: 1.2;
+      max-width: 1400px;
+      margin: 0 auto 24px; } }
 
 .post-header__title--white {
   color: #FFFFFF; }
@@ -231,7 +256,8 @@ p {
   bottom: 24px;
   left: 24px;
   right: 24px;
-  margin: 0; }
+  margin: 0;
+  text-transform: capitalize; }
 
 /* BUTTONS
 ***************************************************/
@@ -419,6 +445,8 @@ p {
     .recommendations__post {
       width: 48%;
       margin-bottom: 0; } }
+  .recommendations__post:hover {
+    background-color: #DDDDDD; }
 
 .recommendations__post-title {
   font-size: 1.8em; }
