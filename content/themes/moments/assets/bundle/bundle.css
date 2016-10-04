@@ -89,7 +89,6 @@ p {
   @media (min-width: 1200px) {
     .main-content {
       padding: 0 64px 64px;
-      max-width: 1400px;
       margin: 0 auto; } }
 
 /* PAGINATION FOR HOMEPAGE AND TAG PAGE
@@ -120,17 +119,17 @@ p {
   max-width: 680px; }
 
 .post-header {
-  padding: 24px 16px 48px;
+  position: relative;
+  padding: 8vh 16px;
   text-align: center;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  margin-bottom: 28px; }
   @media (min-width: 1024px) {
     .post-header {
-      padding: 48px 32px;
-      margin-bottom: 38px; } }
-  @media (min-width: 1200px) {
-    .post-header {
-      padding: 48px 64px;
-      margin-bottom: 38px; } }
+      padding: 12vh 48px; } }
+
+.post-header--image {
+  margin-bottom: 60px; }
 
 .post-header__title {
   font-size: 3.2em;
@@ -141,6 +140,9 @@ p {
       font-size: 6.4em;
       margin-bottom: 24px;
       line-height: 1.2; } }
+
+.post-header__title--white {
+  color: #FFFFFF; }
 
 .post-header__desc {
   font-size: 1.2em;
@@ -162,6 +164,31 @@ p {
   @media (min-width: 1024px) {
     .post-header__meta {
       font-size: 1.6em; } }
+
+.post-header__meta--white {
+  color: #F9F9FB; }
+
+.post-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 4px; }
+
+.scrim {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.36);
+  z-index: -1;
+  border-radius: 4px; }
 
 /* BLOG LIST FOR HOMEPAGE & TAG PAGE
 ***************************************************/

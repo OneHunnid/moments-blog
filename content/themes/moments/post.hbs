@@ -33,9 +33,15 @@
 
       {{else}}
 
-        <header class="post-header">
-          <h1 class="post-header__title">{{title}}</h1>
-          <section class="post-header__meta">
+        <header class="post-header {{#if image}}post-header--image{{/if}}">
+
+          {{#if image}}
+            <div class="post-image" style="background-image: url({{image}})"></div>
+            <div class="scrim"></div>
+          {{/if}}
+
+          <h1 class="post-header__title {{#if image}}post-header__title--white{{/if}}">{{title}}</h1>
+          <section class="post-header__meta {{#if image}}post-header__meta--white{{/if}}">
               {{tags suffix=" • "}}<time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD YYYY"}}</time>
           </section>
         </header>
