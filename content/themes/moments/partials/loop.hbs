@@ -1,11 +1,28 @@
 
 {{!-- This is the post loop - each post will be output using this markup --}}
 {{#foreach posts}}
-<article class="{{post_class}} blog-list__item">
-  <div class="blog-list__item__meta">
-      {{tags suffix=" • "}}
-      <time class="blog-list__item__date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD YYYY"}}</time>
-  </div>
-  <h2 class="blog-list__item__title"><a href="{{url}}">{{title}}</a></h2>
-</article>
+  {{#if image}}
+    <article class="{{post_class}} blog-list__item">
+        <div class="blog-list__item__image" style="background-image: url({{image}})"></div>
+        <div class="blog-list__item__scrim"></div>
+        <div class="blog-list__item__meta blog-list__item__meta--white">
+            {{tags suffix=" • "}}
+            <time class="blog-list__item__date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD YYYY"}}</time>
+        </div>
+        <h2 class="blog-list__item__title blog-list__item__title--white"><a href="{{url}}">{{title}}</a></h2>
+        <a href="{{url}}" class="blog-list__anchor"></a>
+    </article>
+
+  {{else}}
+
+    <article class="{{post_class}} blog-list__item">
+      <a href="{{url}}" class="blog-list__anchor">
+        <div class="blog-list__item__meta">
+            {{tags suffix=" • "}}
+            <time class="blog-list__item__date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD YYYY"}}</time>
+        </div>
+        <h2 class="blog-list__item__title"><a href="{{url}}">{{title}}</a></h2>
+      </a>
+    </article>
+  {{/if}}
 {{/foreach}}
